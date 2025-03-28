@@ -13,7 +13,7 @@ class Buyer (
         }
         else {
             println("Oferty na rynku:")
-                    Offers.offers.forEachIndexed { index, product -> // dla kazdej
+                    Offers.offers.forEachIndexed { index, product -> // dla kazdego elementu w liscie printuj index i kazde pole klasy produkt
                         print("${index+1} |")
                         print("nazwa: ${product.name} |")
                         print("cena: ${product.price} |")
