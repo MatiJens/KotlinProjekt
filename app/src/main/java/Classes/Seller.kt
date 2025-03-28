@@ -10,6 +10,6 @@ class Seller (
     fun newOffer(name : String, price : Double, quantity : Int, description : String) {
         val offer = Product(name, price, quantity, description, this.login)
         println("Dodano: $name")
-        Offers.offers.add(offer.name)
+        Offers.offers.add(offer)
     }
 }

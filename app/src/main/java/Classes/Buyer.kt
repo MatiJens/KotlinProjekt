@@ -23,4 +23,8 @@ class Buyer (
                     }
         }
     }
+
+    override fun giveOpinion(review: String, rating: opinions) {
+        super.giveOpinion(review, rating)
+    }
 }
