@@ -5,7 +5,7 @@ class Buyer (
     login : String,
     email : String,
     date : String
-) : User(id,login,email,date), paymentMethods {
+) : User(id,login,email,date) {
 
     fun showOffers() {
         if(Offers.offers.isEmpty()) { // sprawdza czy lista nie jest pusta
@@ -23,30 +23,4 @@ class Buyer (
                     }
         }
     }
-
-    override fun payBlik(amount: Double, blikCode: Int): Result<String> {
-        return when {
-            blikCode != blikCode -> Result.failure(Exception("Błędny Blik!"))
-            amount <= 0 -> Result.failure(Exception("Kwota musi być większa od 0!"))
-            else -> Result.success("Płatność $amount zł zakończona sukcesem!")
-        }
-    }
-
-    override fun payCard(amount: Double, cardNumber: Int, CVV: Int): Result<String> {
-        return when {
-            CVV != CVV -> Result.failure(Exception("Bład!"))
-            cardNumber != cardNumber -> Result.failure(Exception("Zły numer karty"))
-            amount <= 0 -> Result.failure(Exception("Kwota musi być większa od 0!"))
-            else -> Result.success("Płatność $amount zł zakończona sukcesem!")
-        }
-    }
-
-    override fun payCash(amount: Double): Result<String> {
-        return when {
-            amount <= 0 -> Result.failure(Exception("Kwota musi być większa od 0!"))
-            else -> Result.success("Zapłaciłeś $amount zł.")
-        }
-    }
-
-
 }
