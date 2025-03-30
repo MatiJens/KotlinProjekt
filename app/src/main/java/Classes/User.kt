@@ -6,8 +6,8 @@ abstract class User (
     val email: String,
     val date: String
 ) : opinion {
-    override fun giveOpinion(login : String, review: String, rating: opinions) {
-        val user = Users.users.find { it.login == login }
+    override fun giveOpinion(login : String, review: String, rating: opinions)  {
+        val user = Users.users.any { it.login == login }
         if (user == null) {
 
         }
