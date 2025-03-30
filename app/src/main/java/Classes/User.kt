@@ -9,6 +9,9 @@ abstract class User (
     override fun giveOpinion(login : String, review: String, rating: opinions) {
         val user = Users.users.find { it.login == login }
         if (user == null) {
+            println("nie ma takiego uzytkownika")
+        }
+        else {
 
         }
     }
