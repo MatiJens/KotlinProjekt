@@ -14,7 +14,7 @@ fun main() {
     Kuba.buyProduct(1)
     Kuba.buyProduct(0)
     Tomek.payCash(3.0)
-    Kuba.giveOpinion(1, "Chujowe", opinions.TRAGEDIA)
+    Kuba.giveOpinion(1, "Jablka przyszly splesniale", opinions.TRAGEDIA)
     Kuba.watchOpinions(1)
     Tomek.watchOpinions(1)
     Tomek.watchOpinions(0)
