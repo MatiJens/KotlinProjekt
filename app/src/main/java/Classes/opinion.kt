@@ -1,6 +1,6 @@
 package Classes
 
 interface opinion {
-    fun giveOpinion(login : String, review : String, rating : opinions)
-    fun watchOpinion(login : String)
+    fun giveOpinion(targetID: Int, review: String, rating: opinions)
+    fun watchOpinions(targetID: Int): List<opinionData>
 }
