@@ -3,9 +3,9 @@ package Classes
 class Product (
     val name: String,
     val price: Double,
-    val quantity : Int,
+    var quantity : Int,
     val description : String,
-    val seller : String
+    val idSeller : Int
 ) {
 
 }

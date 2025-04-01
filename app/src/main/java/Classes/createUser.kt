@@ -1,17 +1,20 @@
 package Classes
 
 object createUser {
-    private var userIdCounter = 1 //
+    private var userIdCounter = 0 //
 
-    fun createUser(type: String, username: String, email: String, date : String): User? {
+    fun createBuyer(username: String, email: String, date : String): Buyer {
         val id = userIdCounter++
-        return when (type.lowercase()) {
-            "buyer" -> Buyer(id, username, email, date)
-            "seller" -> Seller(id, username, email, date)
-            else -> {
-                println("Nieznany typ użytkownika: $type")
-                null
-            }
-        }
+        val newBuyer = Buyer(id, username, email, date, 0.0)
+        Users.users.add(id,newBuyer)
+        return newBuyer
     }
-}
+
+    fun createSeller(username: String, email: String, date : String): Seller {
+        val id = userIdCounter++
+        val newSeller = Seller(id, username, email, date, 0.0)
+        Users.users.add(id,newSeller)
+        return newSeller
+    }
+    }
+
