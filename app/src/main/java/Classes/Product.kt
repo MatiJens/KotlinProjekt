@@ -1,6 +1,6 @@
 package Classes
 
-class Product (
+data class Product (
     val name: String,
     val price: Double,
     var quantity : Int,

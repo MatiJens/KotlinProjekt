@@ -1,5 +1,5 @@
 package Classes
 
 object Offers {
-    val offers = mutableListOf<Product>() // singleton zapewniający dostęp do listy offers kazdej klasie w projekcie
+    val offers = mutableListOf<Product>() // Singleton przechowujący wszystkie oferty
 }

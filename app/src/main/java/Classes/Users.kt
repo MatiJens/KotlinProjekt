@@ -1,5 +1,5 @@
 package Classes
 
 object Users {
-    val users = mutableListOf<User>() // obiekton z wszystkimi uzytkownikami
+    val users = mutableListOf<User>() // Singleton przechowujący wszystkich użytkowników
 }
